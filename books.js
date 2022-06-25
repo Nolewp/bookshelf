@@ -35,10 +35,10 @@ function acceptData() {
 function addBookToLibrary() {
     shelf.innerHTML += 
     `<div id="book">
-        <div>
-            <p>${myLibrary.title}</p>
-            <p>${myLibrary.author}</p>
-        </div>
+
+    Title:<p> ${myLibrary.title}</p>
+    Author: <p> ${myLibrary.author}</p>
+     
         <span class="options">
             <i onClick="editPost(this)" class="fas fa-edit"></i>
             <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
@@ -50,7 +50,9 @@ let deletePost = (e) => {
   };
 
   let editPost = (e) => {
-    input.value = e.parentElement.previousElementSibling.innerHTML;
+    let children = e.parentElement.parentElement.children;
+    getAuthor.value = children[1].firstChild.data;
+    getTitle.value = children[0].firstChild.data;
     e.parentElement.parentElement.remove();
   }
 
