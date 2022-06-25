@@ -6,10 +6,13 @@ html {
 #form {
     width: 50vw;
     text-align: center;
-    justify-content: center;
+    margin: auto;
+}
+fieldset, button {
+    border-radius: 25px;
 }
 #submit {
-    width: 50vw;
+    width: 20vw;
 }
 #msg {
     color: red;
@@ -17,3 +20,16 @@ html {
 i {
     cursor: pointer;
   }
+#bookCollection div {
+    
+    width: 30vw;
+    border-radius: 25px;
+    background-color: rgb(10, 181, 181);
+    margin: auto;
+}
+
+
+.options i {
+    margin-inline: 2vw;
+    margin-bottom: 1vh;
+}
