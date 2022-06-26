@@ -4,10 +4,25 @@ let msg = document.getElementById("msg");
 let shelf = document.getElementById("bookCollection")
 let getTitle = document.getElementById("title");
 let getAuthor = document.getElementById("author");
+let showForm = document.getElementById("openForm")
+
+showForm.addEventListener("click", (e) => {
+    openForm()
+    console.log("show form")
+})
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submit");
+    
 
     formEval();
 });
@@ -21,6 +36,8 @@ function formEval() {
         console.log("successs");
         msg.innerHTML = "";
         acceptData();
+        closeForm()
+
     }
 }
 
@@ -36,8 +53,8 @@ function addBookToLibrary() {
     shelf.innerHTML += 
     `<div id="book">
 
-    Title:<p> ${myLibrary.title}</p>
-    Author: <p> ${myLibrary.author}</p>
+    <p> ${myLibrary.title}</p>
+    By: <p> ${myLibrary.author}</p>
      
         <span class="options">
             <i onClick="editPost(this)" class="fas fa-edit"></i>
@@ -56,26 +73,3 @@ let deletePost = (e) => {
     e.parentElement.parentElement.remove();
   }
 
-
-
-// let river = new Book("hemigway", "Up the river", 500);
-
-
-
-
-// function Book( author, title, pages) {
-//     this.author = author;
-//     this.title = title;
-//     this.pages = pages;
-// }
-// Book.prototype.info = function() {
-//     return console.log("The title is " + this.title);
-// }
-
-// function addBookToLibrary() {
-
-//     console.log("author " + getAuthor);
-    
-//     let book1 = new Book(getAuthor, getTitle);
-//     console.log(book1.info());
-// }
