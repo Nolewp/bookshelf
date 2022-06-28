@@ -3,7 +3,7 @@ body {
     background-color: #4D5061;
 }
 .topnav {
-    background-color: #5C80BC;
+    background-color: #3782eb;
     overflow: hidden;
     width: 100vw;
 }
@@ -13,7 +13,6 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    
   }
   
 #myForm {
@@ -23,12 +22,18 @@ body {
     right: 25vw;
     left: 25vw;
     border-radius: 25PX;
-    background-color: #CDD1C4;
-    border: 3px solid #f1f1f1;
+    background-color: #ffffff;
+    border: 3px solid #68a9b9;
     z-index: 9;
 }
+#submit {
+    background-color: green;
+}
+#close {
+    background-color: red;
+}
 .openForm {
-    background-color: #b9b6e7;
+    background-color: #68a9b9;
     color: black;
     padding: 5px;
     margin-left: 30vw;
@@ -84,10 +89,7 @@ i {
     text-overflow: initial;
     word-break: break-all;
     padding: 2px;
-
 }
-
-
 #titleGrid {
     grid-area: title;
     font-style: italic;
