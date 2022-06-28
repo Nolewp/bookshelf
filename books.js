@@ -50,17 +50,19 @@ function acceptData() {
 }
 
 function addBookToLibrary() {
-    shelf.innerHTML += 
-    `<div id="book">
+    shelf.innerHTML += `
+    <a id="bookItem">
+        <div id="book">
 
-    <p> ${myLibrary.title}</p>
-    By: <p> ${myLibrary.author}</p>
-     
-        <span class="options">
-            <i onClick="editPost(this)" class="fas fa-edit"></i>
-            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
-        </span>
-    </div>`;
+        <p id="titleGrid"> ${myLibrary.title}</p>
+        <p id="byGrid">By: </p> <p id="authorGrid"> ${myLibrary.author}</p>
+        
+            <span class="options">
+                <i onClick="editPost(this)" class="fas fa-edit"></i>
+                <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+            </span>
+        </div>
+    </a>`;
 }
 let deletePost = (e) => {
     e.parentElement.parentElement.remove();
@@ -68,7 +70,7 @@ let deletePost = (e) => {
 
   let editPost = (e) => {
     let children = e.parentElement.parentElement.children;
-    getAuthor.value = children[1].firstChild.data;
+    getAuthor.value = children[2].firstChild.data;
     getTitle.value = children[0].firstChild.data;
     e.parentElement.parentElement.remove();
   }
