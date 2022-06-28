@@ -1,14 +1,15 @@
 body {
     margin: 0;
+    background-color: #4D5061;
 }
 .topnav {
-    background-color: #333;
+    background-color: #5C80BC;
     overflow: hidden;
     width: 100vw;
 }
 .topnav a {
     float: left;
-    color: #257c05;
+    color: #CDD1C4;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -22,9 +23,17 @@ body {
     right: 25vw;
     left: 25vw;
     border-radius: 25PX;
-    background-color: rgb(121, 232, 160);
+    background-color: #CDD1C4;
     border: 3px solid #f1f1f1;
     z-index: 9;
+}
+.openForm {
+    background-color: #b9b6e7;
+    color: black;
+    padding: 5px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    width: 40vw;
 }
 
 #form {
@@ -48,19 +57,57 @@ fieldset, button {
 i {
     cursor: pointer;
   }
-#bookCollection div {
+#bookCollection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
     
-    width: 30vw;
+}
+#bookCollection > #bookItem {
+    display: flex;
+    width: 250px;
+    height: 200px;
+}
+#book {
+    display: grid;
     border-radius: 25px;
-    background-color: rgb(10, 181, 181);
-    margin: auto;
+    background-color: #CDD1C4;
+    margin: 5px;
+    width: 250px;;
+    grid-template-areas:    
+    "title title"
+    "by author"
+    "options options";
 }
-#bookCollection div p {
-    padding-left: 2vw;
+#book > p {
+    text-overflow: initial;
+    word-break: break-all;
+    padding: 2px;
+
 }
 
 
+#titleGrid {
+    grid-area: title;
+    font-style: italic;
+    text-align: center;
+}
+
+#authorGrid {
+    grid-area: author;
+    text-align: left;
+}
+#byGrid {
+    grid-area: by;
+    text-align: right;
+    padding-right: 5px;
+}
 .options i {
-    margin-inline: 2vw;
-    margin-bottom: 1vh;
+    margin-inline: 1vw;
+    margin-bottom: 1vh;  
+}
+.options {
+    grid-area: options;
+    text-align: center;
 }
