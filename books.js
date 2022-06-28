@@ -78,5 +78,6 @@ let deletePost = (e) => {
     getAuthor.value = children[2].firstChild.data;
     getTitle.value = children[0].firstChild.data;
     e.parentElement.parentElement.remove();
+    openForm()
   }
 
