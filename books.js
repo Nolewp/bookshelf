@@ -1,5 +1,6 @@
 let form = document.getElementById("form");
 let submit = document.getElementById("submit");
+let exitForm = document.getElementById("close");
 let msg = document.getElementById("msg");
 let shelf = document.getElementById("bookCollection")
 let getTitle = document.getElementById("title");
@@ -9,6 +10,10 @@ let showForm = document.getElementById("openForm")
 showForm.addEventListener("click", (e) => {
     openForm()
     console.log("show form")
+})
+
+exitForm.addEventListener("click", (e) => {
+    closeForm();
 })
 
 function openForm() {
