@@ -25,6 +25,7 @@ body {
     background-color: #ffffff;
     border: 3px solid #68a9b9;
     z-index: 9;
+    width: auto;
 }
 #submit {
     background-color: green;
@@ -39,6 +40,7 @@ body {
     margin-left: 30vw;
     margin-right: 30vw;
     width: 40vw;
+    border-radius: 25px;
 }
 
 #form {
@@ -46,14 +48,43 @@ body {
     text-align: center;
     margin: auto;
 }
+.input-field {
+    background: #fff;
+    border: 1px solid #ddd;
+    display:inline;
+    min-width: 10px;
+    width: 20vw;
+  }
+  .input-field .addon {
+    padding: 2px 8px;
+    text-shadow: 0 1px 0 #fff;
+    background: #f0f0f0;
+  }
+  .input-field input {
+    padding: 0 4px;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    resize: none;
+    flex: 1;
+  }
+  .input-field:hover {
+    border: 1px solid #05c9f0;
+  }
+form > input {
+    display: flex;
+    align-items:flex-end;
+    background-color: #3782eb;
+}
 
-fieldset, button {
+form > button {
+    width: fit-content;
     border-radius: 25px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 0%;
+    margin-bottom: 2px;
 }
 #submit {
+    min-width: fit-content;
     width: 20vw;
 }
 #msg {
