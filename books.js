@@ -27,8 +27,6 @@ function closeForm() {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("submit");
-    
-
     formEval();
 });
 
@@ -42,7 +40,6 @@ function formEval() {
         msg.innerHTML = "";
         acceptData();
         closeForm()
-
     }
 }
 
@@ -52,6 +49,11 @@ function acceptData() {
     myLibrary["author"] = getAuthor.value;
     myLibrary["title"] = getTitle.value;
     addBookToLibrary();
+    clearForm()
+}
+function clearForm () {
+    getAuthor.value = ''
+    getTitle.value = ''
 }
 
 function addBookToLibrary() {
