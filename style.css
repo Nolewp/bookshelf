@@ -9,13 +9,13 @@ body {
 }
 .topnav a {
     float: left;
-    color: #CDD1C4;
+    color: white;
     font-weight: bold;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-  
+
 #myForm {
     display: none;
     position: fixed;
@@ -47,7 +47,7 @@ body {
     border-radius: 25px;
 }
 
-#form {
+#form, #form > a {
     width: 50vw;
     text-align: center;
     margin: auto;
