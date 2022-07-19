@@ -51,7 +51,7 @@ exitForm.addEventListener("click", (e) => {
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
-  }
+}
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
@@ -85,6 +85,7 @@ function acceptData() {
     addBookToLibrary();
     clearForm()
 }
+
 function clearForm () {
     getAuthor.value = ''
     getTitle.value = ''
@@ -108,14 +109,14 @@ function addBookToLibrary() {
 }
 let deletePost = (e) => {
     e.parentElement.parentElement.remove();
-  };
+};
 
-  let editPost = (e) => {
+let editPost = (e) => {
     let children = e.parentElement.parentElement.children;
     getAuthor.value = children[2].firstChild.data;
     getTitle.value = children[0].firstChild.data;
     getRead.value = children[3].firstChild.data;
     e.parentElement.parentElement.parentElement.remove();
     openForm()
-  }
+}
 
