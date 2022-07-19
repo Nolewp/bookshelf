@@ -52,6 +52,7 @@ exitForm.addEventListener("click", (e) => {
 function openForm() {
     document.getElementById("myForm").style.display = "block";
 }
+
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
@@ -118,5 +119,9 @@ let editPost = (e) => {
     getRead.value = children[3].firstChild.data;
     e.parentElement.parentElement.parentElement.remove();
     openForm()
+}
+
+let removeAllBooks = () => {
+    localStorage.clear()
 }
 
