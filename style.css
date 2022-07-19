@@ -34,7 +34,7 @@ body {
 #close {
     background-color: red;
 }
-.openForm {
+.openForm, #removeAllBooks {
     background-color: #44b0ee;
     color: rgb(255, 255, 255);
     padding: 5px;
@@ -152,4 +152,8 @@ i {
 .options {
     grid-area: options;
     text-align: center;
+}
+
+#removeAllBooks {
+    background-color: red;
 }
