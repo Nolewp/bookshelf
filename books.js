@@ -7,6 +7,7 @@ let getTitle = document.getElementById("title");
 let getAuthor = document.getElementById("author");
 let getRead = document.getElementById("readOrNot");
 let showForm = document.getElementById("openForm")
+let removeBtnArea = document.getElementById("removeBooks")
 // local storage
 
 function storageAvailable(type) {
@@ -120,6 +121,12 @@ let editPost = (e) => {
     e.parentElement.parentElement.parentElement.remove();
     openForm()
 }
+
+    if (shelf.innerHTML) {
+        removeBtnArea.innerHTML = `
+        <button id="removeAllBooks" onclick="removeAllBooks()">Remove  All Books</button>
+        `
+    }
 
 let removeAllBooks = () => {
     localStorage.clear()
