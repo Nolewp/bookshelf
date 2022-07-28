@@ -8,6 +8,7 @@ let getAuthor = document.getElementById("author");
 let getRead = document.getElementById("readOrNot");
 let showForm = document.getElementById("openForm")
 let removeBtnArea = document.getElementById("removeBooks")
+console.log("Hello World")
 // local storage
 
 function storageAvailable(type) {
