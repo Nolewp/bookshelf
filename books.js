@@ -67,8 +67,12 @@ form.addEventListener("submit", (e) => {
 });
 
 function formEval() {
-    if (getAuthor.value === "" || getTitle.value === "") {
-        msg.innerHTML = "Author and Title need to be filled in";
+    if (getAuthor.value === "")  {
+        getAuthor.required = true;
+        console.log("form not filled in")
+    }
+    else if (getTitle.value === "") {
+        getTitle.required = true;
         console.log("form not filled in")
     }
     else {
